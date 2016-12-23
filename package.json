@@ -1,0 +1,16 @@
+{
+  "name": "hanabot",
+  "version": "0.0.1",
+  "description": "Chat bot made with botframework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Selcher <selcher123@gmail.com> (http://selcher.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "botbuilder": "^3.4.4",
+    "restify": "^4.3.0"
+  }
+}
