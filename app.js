@@ -1,5 +1,6 @@
 var restify = require('restify');
 var builder = require('botbuilder');
+var regexgen = require('regexgen');
 
 //=============
 // BOT Setup
@@ -28,7 +29,12 @@ server.post('/api/messages', connector.listen());
 
 bot.dialog('/', intents);
 
-intents.matches(/^change name/i, [
+// intent matches
+var intentMatches = {
+    changeName: regexgen(['change name'])
+};
+
+intents.matches(intentMatches.changeName, [
     function (session) {
         session.beginDialog('/profile');
     },
